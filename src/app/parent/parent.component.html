@@ -1,3 +1,7 @@
 <h1>Parent</h1>
 <!--this is to pass the data to the child-->
-<app-child [message]="message"></app-child>
+Message:{{message}}<br>
+<!--parent subscribe to messageEvent 
+outputted by the child component and 
+recive msg function when ever that event occurs-->
+<app-child (messageEvent)="receiveMessage($event)"></app-child>
